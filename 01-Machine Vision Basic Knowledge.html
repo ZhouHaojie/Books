@@ -1,0 +1,441 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Chapter 1 Machine Vision Basic Knowledge · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02-BinocularVision.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="01-Machine Vision Basic Knowledge.html">
+            
+                <a href="01-Machine Vision Basic Knowledge.html">
+            
+                    
+                    Chapter 1 Machine Vision Basic Knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-BinocularVision.html">
+            
+                <a href="02-BinocularVision.html">
+            
+                    
+                    Chapter 2 Binocular Vision
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Chapter 1 Machine Vision Basic Knowledge</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="images">Images</h2>
+<p><strong>gray-value images</strong></p>
+<ul>
+<li>regular pixel grid</li>
+<li><img src="_mathjax_3e353b2.svg"> indicates <strong>brightness</strong> at position <img src="_mathjax_61f23aee.svg"></li>
+<li>image given as 2-D, discretized, and quantized function</li>
+<li>origin of coordinate system: top-left corner, u- and v-axis</li>
+</ul>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513141356132.png" style="zoom:50%;"></p>
+<h2 id="filtering">Filtering</h2>
+<p><strong>image filtering with a filter mask</strong></p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513141453046.png" style="zoom:50%;"></p>
+<p>&#x5377;&#x79EF;&#x8FD0;&#x7B97;&#xFF1A;&#x53EF;&#x770B;&#x4F5C;&#x662F;&#x52A0;&#x6743;&#x6C42;&#x548C;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x56FE;&#x50CF;&#x533A;&#x57DF;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x5206;&#x522B;&#x548C;filter mask(&#x6743;&#x77E9;&#x9635;)&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x76F8;&#x4E58;&#xFF0C;&#x6240;&#x6709;&#x4E58;&#x79EF;&#x4E4B;&#x548C;&#x4F5C;&#x4E3A;&#x533A;&#x57DF;&#x4E2D;&#x5FC3;&#x50CF;&#x7D20;&#x7684;&#x65B0;&#x503C;&#x3002;</p>
+<p>&#x5377;&#x79EF;&#x8FD0;&#x7B97;&#x5BF9;&#x56FE;&#x50CF;&#x90BB;&#x57DF;&#x7684;&#x50CF;&#x7D20;&#x7070;&#x5EA6;&#x8FDB;&#x884C;&#x5E73;&#x5747;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x51CF;&#x5C0F;&#x56FE;&#x50CF;&#x4E2D;&#x566A;&#x58F0;&#x5F71;&#x54CD;&#x3001;&#x964D;&#x4F4E;&#x56FE;&#x50CF;&#x5BF9;&#x6BD4;&#x5EA6;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p><strong>convolution operator(mathematical)</strong>
+<img src="_mathjax_c11f0711.svg"></p>
+<h3 id="typical-filters">Typical Filters</h3>
+<ul>
+<li><p><strong>smoothing with Gaussian</strong></p>
+<p>&#x9AD8;&#x65AF;&#x5E73;&#x6ED1;&#x4E0E;&#x7B80;&#x5355;&#x5E73;&#x6ED1;&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x5728;&#x5BF9;&#x90BB;&#x57DF;&#x5185;&#x50CF;&#x7D20;&#x8FDB;&#x884C;&#x5E73;&#x5747;&#x65F6;&#xFF0C;&#x7ED9;&#x4E88;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x7684;&#x50CF;&#x7D20;<strong>&#x4E0D;&#x540C;&#x7684;&#x6743;&#x503C;</strong>&#xFF0C;&#x6A21;&#x677F;&#x8D8A;&#x9760;&#x8FD1;&#x90BB;&#x57DF;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;&#xFF0C;&#x5176;&#x6743;&#x503C;&#x8D8A;&#x9AD8;&#x3002;&#x5728;&#x56FE;&#x50CF;&#x7EC6;&#x8282;&#x8FDB;&#x884C;&#x6A21;&#x7CCA;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x591A;&#x7684;&#x4FDD;&#x7559;&#x56FE;&#x50CF;&#x603B;&#x4F53;&#x7684;&#x7070;&#x5EA6;&#x5206;&#x5E03;&#x7279;&#x5F81;&#x3002;</p>
+<p>&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#x5668;&#x6700;&#x91CD;&#x8981;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x7684;&#x6807;&#x51C6;&#x5DEE;<img src="_mathjax_95acd238.svg">&#xFF0C;&#x6807;&#x51C6;&#x5DEE;&#x548C;&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#x5668;&#x7684;&#x5E73;&#x6ED1;&#x80FD;&#x529B;&#x6709;&#x5F88;&#x5927;&#x7684;&#x80FD;&#x529B;&#xFF0C;<img src="_mathjax_95acd238.svg">&#x8D8A;&#x5927;&#xFF0C;&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#x5668;&#x7684;&#x9891;&#x5E26;&#x5C31;&#x8F83;&#x5BBD;&#xFF0C;&#x5BF9;&#x56FE;&#x50CF;&#x7684;&#x5E73;&#x6ED1;&#x7A0B;&#x5EA6;&#x5C31;&#x8D8A;&#x597D;&#x3002;&#x901A;&#x8FC7;&#x8C03;&#x8282;<img src="_mathjax_95acd238.svg">&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5E73;&#x8861;&#x5BF9;&#x56FE;&#x50CF;&#x7684;&#x566A;&#x58F0;&#x7684;&#x6291;&#x5236;&#x548C;&#x5BF9;&#x56FE;&#x50CF;&#x7684;&#x6A21;&#x7CCA;&#x3002;</p>
+<p><img src="_mathjax_eaef99b1.svg">                                                             </p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513142703216.png" style="zoom:50%;"></p>
+<p>&#x51FD;&#x6570;&#x56FE;&#x50CF;&#x5173;&#x4E8E;<img src="_mathjax_6b1b7a62.svg"> &#x5BF9;&#x79F0;&#xFF0C;&#x5728;&#x539F;&#x70B9;&#x6709;&#x6700;&#x5927;&#x503C;&#xFF0C;</p>
+</li>
+</ul>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513142805619.png" style="zoom: 33%;"></p>
+<ul>
+<li><p><strong>partial derivatives(&#x504F;&#x5BFC;&#x6570;)</strong></p>
+<p><img src="_mathjax_2a736be0.svg">&#xFF0C; &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4F30;&#x8BA1;&#x503C;&#xFF0C;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#xFF0C;&#x53EF;&#x8F6C;&#x6362;&#x4E3A;&#x4E0B;&#x56FE;&#x77E9;&#x9635;
+<img src="_mathjax_2698bcdd.svg"></p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513143847276.png" style="zoom: 50%;"></p>
+</li>
+</ul>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513143910412.png" style="zoom: 33%;"></p>
+<p>&#x5DE6;&#x8FB9;&#x6CA1;&#x6709;&#x4F7F;&#x7528;Sobel filter,&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x4EA7;&#x751F;zero response</p>
+<p>&#x53F3;&#x8FB9;&#x6CA1;&#x6709;&#x4F7F;&#x7528;Sobel filter,&#x5782;&#x76F4;&#x65B9;&#x5411;&#x4EA7;&#x751F;zero response</p>
+<ul>
+<li><p><strong>2nd order derivative</strong></p>
+<ul>
+<li><p>entries of the Hessian</p>
+<p><img src="_mathjax_92fc9087.svg"> </p>
+</li>
+<li><p>Laplace operator</p>
+<p><img src="_mathjax_7b6af50f.svg"> </p>
+</li>
+</ul>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513145850853.png" style="zoom:50%;"></p>
+</li>
+<li><p>filter combinations</p>
+<ul>
+<li>Laplacian of Gausssian(LoG) = Laplace after Gauss</li>
+</ul>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513150012506.png" alt="image-20200513150012506" style="zoom: 33%;"></p>
+<p>  homogeneous areas response zero, gray-level yield large value</p>
+</li>
+</ul>
+<h2 id="edge-detection">Edge Detection</h2>
+<p><strong>What is gray level edges?</strong></p>
+<blockquote>
+<p>In between those areas where very bright and dark areas touch each other, there is a line which we call the gray level edges(&#x660E;&#x6697;&#x76F8;&#x4EA4;&#x5904;)</p>
+</blockquote>
+<p><strong>Detection of gray level edges</strong></p>
+<ul>
+<li><p>idea 1: detecting maxima in gray-value gradients</p>
+<ul>
+<li>filtering with Sobel filters</li>
+<li>detection of local maxima in gray-scale gradients(&#x5C40;&#x90E8;&#x6700;&#x5927;&#x503C;)</li>
+<li>threshold filtering</li>
+</ul>
+<p>$\longrightarrow$ <strong>Canny Operator</strong></p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513150927624.png" style="zoom: 33%;"></p>
+</li>
+<li><p>idea 2: zero-crossing in the 2nd order derivative</p>
+<ul>
+<li>filtering with Sobel and Laplace filters</li>
+<li>detection of points which cross the origin within the Laplace-filtered image. These must preferably exhibit large gradients</li>
+</ul>
+<p>$\longrightarrow$ <strong>approach of Marr/Hildreth</strong> </p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513151327227.png" style="zoom: 33%;"></p>
+</li>
+</ul>
+<h2 id="camera-optics">Camera Optics</h2>
+<ul>
+<li><p><strong>converting camera coordinates into image coordinates</strong></p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513155349349.png" style="zoom: 33%;"><img src="01-Machine Vision Basic Knowledge/image-20200513155636551.png" alt="image-20200513155636551" style="zoom:33%;"></p>
+<ul>
+<li><p>dimensions and resolution from light-sensitive chip(imager)</p>
+</li>
+<li><p>position of imager within the image plane</p>
+<p><img src="_mathjax_99cff48.svg"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>intrinsic parameters:<ul>
+<li>horizontal and vertical resolution (often identical) <img src="_mathjax_4ab1f034.svg"></li>
+<li>coordinates of the principle point <img src="_mathjax_dea75705.svg"></li>
+<li>[ skewing angle <img src="_mathjax_58609275.svg">] &#x2192; we assume it to be 90&#xB0;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>converting world (vehicle) coordinates to camera coordinates</strong></p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513153729672.png" style="zoom: 33%;"></p>
+<ul>
+<li><img src="_mathjax_cdcca43d.svg"></li>
+<li>extrinsic parameters:<ul>
+<li>translation <img src="_mathjax_e1602473.svg"></li>
+<li>rotation<img src="_mathjax_5767df55.svg"></li>
+<li>rotation also in the form of roll, pitch, and yaw angle.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>together: converting world (vehicle) coordinates to  image coordinates</strong></p>
+<ul>
+<li><p><img src="_mathjax_24e78289.svg"> </p>
+</li>
+<li><p>intrinsic and extrinsic parameters can be determined with camera calibration.</p>
+<p><img src="01-Machine Vision Basic Knowledge/image-20200513160750855.png" style="zoom:50%;"></p>
+</li>
+</ul>
+</li>
+</ul>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02-BinocularVision.html" class="navigation navigation-next " aria-label="Next page: Chapter 2 Binocular Vision">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Chapter 1 Machine Vision Basic Knowledge","level":"1.2","depth":1,"next":{"title":"Chapter 2 Binocular Vision","level":"1.3","depth":1,"path":"02-BinocularVision.md","ref":"02-BinocularVision.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-highlight","-search","search-pro","chapter-fold","splitter","back-to-top-button","code","todo","advanced-emoji","emphasize","klipse","auto-scroll-table","flexible-alerts","mathjax","expandable-chapters-small"],"pluginsConfig":{"chapter-fold":{},"emphasize":{},"todo":{},"splitter":{},"search-pro":{},"auto-scroll-table":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"mathjax":{"forceSVG":true,"version":"2.6-latest"},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-Machine Vision Basic Knowledge.md","mtime":"2020-05-20T09:04:55.386Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-20T09:06:26.583Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
